@@ -10,11 +10,15 @@ def cipher(t:String,s:Int):String= {
       var ch = ((t.charAt(i).toInt + s - 65) % 26 + 65).toChar;
       var str = ch.toString;
       result = result.concat(str);
+    }else if(t.charAt(i)==' '){
+        var str = t.charAt(i).toString;
+        result = result.concat(str);
     }else{
       var ch = ((t.charAt(i).toInt + s - 97) % 26 + 97).toChar;
       var str = ch.toString;
       result = result.concat(str);
     }
+
   }
   return result;
 }
